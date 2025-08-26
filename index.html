@@ -17,73 +17,126 @@
             background: linear-gradient(to bottom, #2c3e50, #1a2530);
             color: #fff;
             line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            flex: 1;
         }
         
-        header {
-            text-align: center;
-            padding: 40px 0;
-            margin-bottom: 30px;
+        /* Header con logo y texto */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
         }
         
         .logo {
-            margin-bottom: 20px;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            box-shadow: 0 0 20px rgba(46, 204, 113, 0.5);
+            border: 3px solid #fff;
         }
         
-        .logo h1 {
-            font-size: 3.5rem;
+        .logo-inner {
+            width: 60px;
+            height: 60px;
+            background-color: #1d5d34;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-text h1 {
+            font-size: 2.8rem;
             font-weight: 800;
-            letter-spacing: 2px;
-            color: #fff;
+            color: #27ae60;
             text-transform: uppercase;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 1px;
+            line-height: 1;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
         
-        .logo h2 {
-            font-size: 1.8rem;
+        .logo-text h2 {
+            font-size: 1.4rem;
             font-weight: 300;
-            letter-spacing: 5px;
-            color: #ecf0f1;
-            margin-top: 10px;
+            letter-spacing: 3px;
+            color: #2ecc71;
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+        
+        /* Contenido principal */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
         }
         
         .about {
-            text-align: center;
-            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .about h3 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-bottom: 20px;
-            color: #ecf0f1;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            color: #2ecc71;
+            text-align: center;
         }
         
         .about p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
+            font-size: 1.1rem;
             color: #bdc3c7;
             line-height: 1.8;
+            text-align: justify;
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
         }
         
         .service-card {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
-            padding: 30px;
+            padding: 25px;
             text-align: center;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -93,16 +146,17 @@
         .service-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background: rgba(46, 204, 113, 0.2);
         }
         
         .service-card i {
-            font-size: 3rem;
-            color: #3498db;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            color: #2ecc71;
+            margin-bottom: 15px;
         }
         
         .service-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             margin-bottom: 15px;
             color: #ecf0f1;
         }
@@ -110,29 +164,31 @@
         .service-card p {
             color: #bdc3c7;
             margin-bottom: 20px;
+            font-size: 0.95rem;
         }
         
         .btn {
             display: inline-block;
-            background: #3498db;
+            background: #27ae60;
             color: white;
             padding: 12px 25px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
             transition: background 0.3s;
+            border: none;
+            cursor: pointer;
         }
         
         .btn:hover {
-            background: #2980b9;
+            background: #219652;
         }
         
         .contact-info {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             padding: 30px;
-            margin-top: 50px;
-            text-align: center;
+            margin-top: 40px;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
@@ -140,7 +196,8 @@
         .contact-info h3 {
             font-size: 1.8rem;
             margin-bottom: 20px;
-            color: #ecf0f1;
+            color: #2ecc71;
+            text-align: center;
         }
         
         .contact-details {
@@ -154,16 +211,22 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: center;
         }
         
         .contact-item i {
             font-size: 2rem;
-            color: #3498db;
+            color: #2ecc71;
             margin-bottom: 10px;
         }
         
         .contact-item p {
             color: #bdc3c7;
+        }
+        
+        .highlight {
+            color: #2ecc71;
+            font-weight: bold;
         }
         
         footer {
@@ -174,60 +237,75 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        .highlight {
-            color: #3498db;
-            font-weight: bold;
-        }
-        
         @media (max-width: 768px) {
-            .logo h1 {
-                font-size: 2.5rem;
+            .header {
+                flex-direction: column;
+                text-align: center;
             }
             
-            .logo h2 {
-                font-size: 1.3rem;
+            .logo-container {
+                margin-right: 0;
+                margin-bottom: 20px;
+                justify-content: center;
             }
             
-            .about h3 {
-                font-size: 1.5rem;
+            .logo-text h1 {
+                font-size: 2.2rem;
             }
             
-            .about p {
-                font-size: 1rem;
+            .logo-text h2 {
+                font-size: 1.1rem;
+            }
+            
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="logo">
-                <h1>MundoCan</h1>
-                <h2>VETERINARIA & SPA</h2>
+        <header class="header">
+            <div class="logo-container">
+                <div class="logo">
+                    <div class="logo-inner">MC</div>
+                </div>
+                <div class="logo-text">
+                    <h1>MundoCan</h1>
+                    <h2>VETERINARIA & SPA</h2>
+                </div>
             </div>
         </header>
         
-        <section class="about">
-            <h3>Veterinaria</h3>
-            <h3>MUNDO CAN</h3>
-            <p>Veterinaria fundada en 2010 con el fin de ofrecer un servicio de calidad con ética y responsabilidad en todas nuestras áreas. Dirigida para animales menores (felinos y caninos).</p>
-        </section>
+        <div class="main-content">
+            <div class="about">
+                <h3>Veterinaria MUNDO CAN</h3>
+                <p>Veterinaria fundada en 2010 con el fin de ofrecer un servicio de calidad con ética y responsabilidad en todas nuestras áreas. Dirigida para animales menores (felinos y caninos).</p>
+                <p>Nuestro equipo de profesionales altamente capacitados está comprometido con el bienestar de tus mascotas, brindando atención médica especializada y servicios de spa de la más alta calidad.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-stethoscope"></i>
+                    <h3>Atención Médica</h3>
+                    <p>Servicio veterinario profesional para caninos y felinos con los más altos estándares de calidad.</p>
+                    <a href="https://wa.me/51924113604?text=Hola,%20quiero%20una%20consulta%20médica" class="btn">Solicitar cita</a>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-spa"></i>
+                    <h3>SPA Canino</h3>
+                    <p>Baños terapéuticos, cortes de pelo y uñas, limpieza dental y más servicios de estética canina.</p>
+                    <a href="https://wa.me/51924113604?text=Hola,%20quiero%20agendar%20un%20servicio%20de%20SPA" class="btn">Reservar SPA</a>
+                </div>
+            </div>
+        </div>
         
         <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-stethoscope"></i>
-                <h3>Atención Médica</h3>
-                <p>Servicio veterinario profesional para caninos y felinos con los más altos estándares de calidad.</p>
-                <a href="https://wa.me/51924113604?text=Hola,%20quiero%20una%20consulta%20médica" class="btn">Solicitar cita</a>
-            </div>
-            
-            <div class="service-card">
-                <i class="fas fa-spa"></i>
-                <h3>SPA Canino</h3>
-                <p>Baños terapéuticos, cortes de pelo y uñas, limpieza dental y más servicios de estética canina.</p>
-                <a href="https://wa.me/51924113604?text=Hola,%20quiero%20agendar%20un%20servicio%20de%20SPA" class="btn">Reservar SPA</a>
-            </div>
-            
             <div class="service-card">
                 <i class="fas fa-syringe"></i>
                 <h3>Vacunación</h3>
