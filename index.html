@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria MundoCan - Veterinaria & SPA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(to bottom, #2c3e50, #1a2530);
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            margin-bottom: 20px;
+        }
+        
+        .logo h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #fff;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .logo h2 {
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: 5px;
+            color: #ecf0f1;
+            margin-top: 10px;
+        }
+        
+        .about {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .about h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ecf0f1;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .about p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #bdc3c7;
+            line-height: 1.8;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .service-card i {
+            font-size: 3rem;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #ecf0f1;
+        }
+        
+        .service-card p {
+            color: #bdc3c7;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+        }
+        
+        .contact-info {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 50px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #ecf0f1;
+        }
+        
+        .contact-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .contact-item i {
+            font-size: 2rem;
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        
+        .contact-item p {
+            color: #bdc3c7;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #7f8c8d;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .highlight {
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .logo h1 {
+                font-size: 2.5rem;
+            }
+            
+            .logo h2 {
+                font-size: 1.3rem;
+            }
+            
+            .about h3 {
+                font-size: 1.5rem;
+            }
+            
+            .about p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>MundoCan</h1>
+                <h2>VETERINARIA & SPA</h2>
+            </div>
+        </header>
+        
+        <section class="about">
+            <h3>Veterinaria</h3>
+            <h3>MUNDO CAN</h3>
+            <p>Veterinaria fundada en 2010 con el fin de ofrecer un servicio de calidad con ética y responsabilidad en todas nuestras áreas. Dirigida para animales menores (felinos y caninos).</p>
+        </section>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-stethoscope"></i>
+                <h3>Atención Médica</h3>
+                <p>Servicio veterinario profesional para caninos y felinos con los más altos estándares de calidad.</p>
+                <a href="https://wa.me/51924113604?text=Hola,%20quiero%20una%20consulta%20médica" class="btn">Solicitar cita</a>
+            </div>
+            
+            <div class="service-card">
+                <i class="fas fa-spa"></i>
+                <h3>SPA Canino</h3>
+                <p>Baños terapéuticos, cortes de pelo y uñas, limpieza dental y más servicios de estética canina.</p>
+                <a href="https://wa.me/51924113604?text=Hola,%20quiero%20agendar%20un%20servicio%20de%20SPA" class="btn">Reservar SPA</a>
+            </div>
+            
+            <div class="service-card">
+                <i class="fas fa-syringe"></i>
+                <h3>Vacunación</h3>
+                <p>Mantén a tu mascota protegida y saludable con nuestro servicio de vacunación.</p>
+                <a href="https://wa.me/51924113604?text=Hola,%20quiero%20información%20sobre%20vacunación" class="btn">Consultar</a>
+            </div>
+            
+            <div class="service-card">
+                <i class="fas fa-pills"></i>
+                <h3>Farmacia Veterinaria</h3>
+                <p>Medicamentos, antipulgas, vitaminas y todos los productos que tu mascota necesita.</p>
+                <a href="https://wa.me/51924113604?text=Hola,%20necesito%20productos%20veterinarios" class="btn">Ver productos</a>
+            </div>
+            
+            <div class="service-card">
+                <i class="fas fa-flask"></i>
+                <h3>Laboratorio</h3>
+                <p>Diagnósticos precisos para el cuidado de tu mascota con tecnología de punta.</p>
+                <a href="https://wa.me/51924113604?text=Hola,%20quiero%20información%20sobre%20análisis%20de%20laboratorio" class="btn">Más información</a>
+            </div>
+            
+            <div class="service-card">
+                <i class="fas fa-tag"></i>
+                <h3>Promociones</h3>
+                <p>Aprovecha nuestras ofertas especiales para el cuidado de tu mascota.</p>
+                <a href="https://wa.me/51924113604?text=Hola,%20quiero%20conocer%20las%20promociones" class="btn">Ver promociones</a>
+            </div>
+        </div>
+        
+        <div class="contact-info">
+            <h3>Contáctanos</h3>
+            <div class="contact-details">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p><span class="highlight">Teléfonos:</span><br>924 113 604<br>01 7550935</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <p><span class="highlight">WhatsApp:</span><br>924 113 604</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p><span class="highlight">Dirección:</span><br>Av. Lima 1136 paradero 6 1/2<br>José Gálvez VMT, Lima</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <p><span class="highlight">Horario:</span><br>Lunes a Sábado: 9:30 am - 8 pm<br>Domingos y feriados: 9 am - 2 pm</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2010 - 2023 Veterinaria MundoCan - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
