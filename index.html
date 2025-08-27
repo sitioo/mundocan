@@ -17,163 +17,138 @@
             background-color: #f8f5f0;
             color: #5a3e2b;
             line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 500px;
             margin: 0 auto;
             padding: 20px;
+            flex: 1;
         }
         
         header {
             text-align: center;
-            padding: 30px 0;
-            background-color: #8a6642;
-            color: white;
-            border-radius: 0 0 20px 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
+            padding: 30px 0 20px;
         }
         
         .logo {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             font-weight: bold;
-            margin-bottom: 10px;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        .tagline {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: #f8f5f0;
-        }
-        
-        .welcome-section {
-            text-align: center;
-            margin-bottom: 40px;
-            padding: 0 20px;
+            margin-bottom: 15px;
+            color: #8a6642;
         }
         
         .welcome-text {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
             color: #5a3e2b;
         }
         
         .choose-text {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 600;
             color: #8a6642;
+            margin-bottom: 25px;
         }
         
         .divider {
-            height: 2px;
+            height: 1px;
             background: linear-gradient(to right, transparent, #8a6642, transparent);
-            margin: 30px auto;
-            width: 80%;
+            margin: 20px 0;
         }
         
-        .services-title {
+        .section-title {
             text-align: center;
-            font-size: 1.8rem;
-            margin-bottom: 30px;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
             color: #5a3e2b;
+            font-weight: 600;
         }
         
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-bottom: 50px;
-            padding: 0 20px;
+        .services-list {
+            list-style: none;
+            margin-bottom: 30px;
         }
         
-        .service-card {
+        .service-item {
             background: white;
-            border-radius: 15px;
-            padding: 25px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
             cursor: pointer;
         }
         
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        .service-item:hover {
+            transform: translateY(-3px);
         }
         
         .service-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
+            width: 30px;
+            margin-right: 15px;
             color: #8a6642;
+            font-size: 1.3rem;
         }
         
         .service-name {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 10px;
+            font-size: 1.1rem;
             color: #5a3e2b;
+            flex: 1;
         }
         
-        .service-btn {
-            display: inline-block;
-            background-color: #8a6642;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 15px;
-            transition: background-color 0.3s ease;
-        }
-        
-        .service-btn:hover {
-            background-color: #5a3e2b;
+        .service-arrow {
+            color: #8a6642;
+            font-size: 1.2rem;
         }
         
         .schedule {
             text-align: center;
-            padding: 30px;
+            padding: 20px;
             background-color: #e8d6c0;
             border-radius: 15px;
-            margin: 40px 0;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin: 30px 0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
         }
         
         .schedule-title {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
             color: #5a3e2b;
+            font-weight: 600;
         }
         
         .schedule-days, .schedule-hours {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
+            font-size: 1rem;
+            margin-bottom: 5px;
         }
         
         footer {
             text-align: center;
-            padding: 30px 0;
-            margin-top: 50px;
+            padding: 20px 0;
+            margin-top: auto;
             background-color: #5a3e2b;
             color: white;
-            border-radius: 20px 20px 0 0;
         }
         
         .footer-text {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
         }
         
         .social-icons {
-            margin-top: 15px;
+            margin-top: 10px;
         }
         
         .social-icons a {
             color: white;
-            font-size: 1.5rem;
-            margin: 0 10px;
+            font-size: 1.2rem;
+            margin: 0 8px;
             transition: color 0.3s ease;
         }
         
@@ -181,9 +156,9 @@
             color: #e8d6c0;
         }
         
-        @media (max-width: 768px) {
-            .services-grid {
-                grid-template-columns: 1fr;
+        @media (max-width: 500px) {
+            .container {
+                padding: 15px;
             }
             
             .logo {
@@ -191,75 +166,69 @@
             }
             
             .welcome-text {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
+            }
+            
+            .service-item {
+                padding: 15px;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">Mundo Can</div>
-            <div class="tagline">Cuidamos a tus mascotas con amor y profesionalismo</div>
-        </div>
-    </header>
-    
     <div class="container">
-        <section class="welcome-section">
+        <header>
+            <div class="logo">Mundo Can</div>
             <p class="welcome-text">¡Bienvenidos! Cuidamos a tus mascotas con amor y profesionalismo 😊</p>
             <p class="choose-text">Elige lo que necesitas 🌟</p>
-        </section>
+        </header>
         
         <div class="divider"></div>
         
-        <h2 class="services-title">Nuestros Servicios</h2>
+        <h2 class="section-title">Nuestros Servicios</h2>
         
-        <div class="services-grid">
-            <div class="service-card" onclick="location.href='#vacunas'">
-                <i class="fas fa-syringe service-icon"></i>
-                <h3 class="service-name">Vacunas y desparasitaciones</h3>
-                <p>Mantén a tu mascota protegida contra enfermedades con nuestros servicios de vacunación y desparasitación.</p>
-                <a href="#vacunas" class="service-btn">Más información</a>
-            </div>
+        <ul class="services-list">
+            <li class="service-item" onclick="window.location.href='#vacunas'">
+                <div class="service-icon"><i class="fas fa-syringe"></i></div>
+                <span class="service-name">Vacunas y desparasitaciones</span>
+                <div class="service-arrow"><i class="fas fa-chevron-right"></i></div>
+            </li>
             
-            <div class="service-card" onclick="location.href='#banio'">
-                <i class="fas fa-bath service-icon"></i>
-                <h3 class="service-name">Baño y peluquería</h3>
-                <p>Deja a tu mascota impecable con nuestros servicios de baño, corte de pelo y cuidado estético.</p>
-                <a href="#banio" class="service-btn">Reservar ahora</a>
-            </div>
+            <li class="service-item" onclick="window.location.href='#banio'">
+                <div class="service-icon"><i class="fas fa-bath"></i></div>
+                <span class="service-name">Baño y peluquería</span>
+                <div class="service-arrow"><i class="fas fa-chevron-right"></i></div>
+            </li>
             
-            <div class="service-card" onclick="location.href='#ecografias'">
-                <i class="fas fa-stethoscope service-icon"></i>
-                <h3 class="service-name">Ecografías y laboratorio</h3>
-                <p>Servicios de diagnóstico avanzado para el cuidado de la salud de tu mascota.</p>
-                <a href="#ecografias" class="service-btn">Solicitar cita</a>
-            </div>
+            <li class="service-item" onclick="window.location.href='#ecografias'">
+                <div class="service-icon"><i class="fas fa-stethoscope"></i></div>
+                <span class="service-name">Ecografías y laboratorio</span>
+                <div class="service-arrow"><i class="fas fa-chevron-right"></i></div>
+            </li>
             
-            <div class="service-card" onclick="location.href='#citas'">
-                <i class="far fa-calendar-alt service-icon"></i>
-                <h3 class="service-name">Reserva tu cita online</h3>
-                <p>Agenda una cita de manera rápida y sencilla a través de nuestro sistema online.</p>
-                <a href="#citas" class="service-btn">Reservar cita</a>
-            </div>
+            <li class="service-item" onclick="window.location.href='#citas'">
+                <div class="service-icon"><i class="far fa-calendar-alt"></i></div>
+                <span class="service-name">Reserva tu cita online</span>
+                <div class="service-arrow"><i class="fas fa-chevron-right"></i></div>
+            </li>
             
-            <div class="service-card" onclick="location.href='#promociones'">
-                <i class="fas fa-tags service-icon"></i>
-                <h3 class="service-name">Promociones del Mes</h3>
-                <p>Descubre nuestras ofertas especiales y promociones exclusivas para el cuidado de tu mascota.</p>
-                <a href="#promociones" class="service-btn">Ver promociones</a>
-            </div>
+            <li class="service-item" onclick="window.location.href='#promociones'">
+                <div class="service-icon"><i class="fas fa-tags"></i></div>
+                <span class="service-name">Promociones del Mes</span>
+                <div class="service-arrow"><i class="fas fa-chevron-right"></i></div>
+            </li>
             
-            <div class="service-card" onclick="location.href='#ubicacion'">
-                <i class="fas fa-map-marker-alt service-icon"></i>
-                <h3 class="service-name">Cómo llegar</h3>
-                <p>Encuentra nuestra ubicación y las mejores rutas para visitarnos con facilidad.</p>
-                <a href="#ubicacion" class="service-btn">Ver mapa</a>
-            </div>
-        </div>
+            <li class="service-item" onclick="window.location.href='#ubicacion'">
+                <div class="service-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <span class="service-name">Cómo llegar</span>
+                <div class="service-arrow"><i class="fas fa-chevron-right"></i></div>
+            </li>
+        </ul>
+        
+        <div class="divider"></div>
         
         <div class="schedule">
-            <h3 class="schedule-title">Horario de Atención</h3>
+            <p class="schedule-title">Horario de Atención</p>
             <p class="schedule-days">Lunes a Sábado: 9:30 am - 8 pm</p>
             <p class="schedule-hours">Domingos y Feriados: 9 am - 2 pm</p>
         </div>
@@ -267,33 +236,23 @@
     
     <footer>
         <div class="container">
-            <p class="footer-text">Mundo Can - Cuidando a tus mascotas desde 2010</p>
-            <p class="footer-text">Teléfono: (123) 456-7890 | Email: info@mundocan.com</p>
+            <p class="footer-text">Mundo Can - Cuidando a tus mascotas con amor</p>
             <div class="social-icons">
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
     </footer>
     
     <script>
-        // Efecto de retroalimentación al hacer clic en las tarjetas de servicio
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.addEventListener('click', function() {
+        // Efecto de retroalimentación al hacer clic en los servicios
+        document.querySelectorAll('.service-item').forEach(item => {
+            item.addEventListener('click', function() {
                 this.style.transform = 'scale(0.98)';
                 setTimeout(() => {
                     this.style.transform = '';
                 }, 200);
-            });
-        });
-        
-        // Simulación de redirección (en un caso real, aquí irían enlaces reales)
-        document.querySelectorAll('.service-btn').forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                alert('En una implementación real, esto llevaría a la página específica del servicio.');
             });
         });
     </script>
