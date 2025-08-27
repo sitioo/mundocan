@@ -3,366 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veterinaria MundoCan - Veterinaria & SPA</title>
+    <title>Mundo Can - Cuidado Profesional para Mascotas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            background: linear-gradient(to bottom, #2c3e50, #1a2530);
-            color: #fff;
+            background-color: #f8f5f0;
+            color: #5a3e2b;
             line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            flex: 1;
         }
         
-        /* Header con logo y texto */
-        .header {
-            display: flex;
-            align-items: center;
-            padding: 20px 0;
-            margin-bottom: 40px;
-            border-bottom: 2px solid #3498db;
-        }
-        
-        .logo-container {
-            display: flex;
-            align-items: center;
-            margin-right: 30px;
+        header {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #8a6642;
+            color: white;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
         }
         
         .logo {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            box-shadow: 0 0 20px rgba(46, 204, 113, 0.5);
-            border: 3px solid #fff;
-        }
-        
-        .logo-inner {
-            width: 60px;
-            height: 60px;
-            background-color: #1d5d34;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            font-size: 14px;
-            text-align: center;
-        }
-        
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .logo-text h1 {
             font-size: 2.8rem;
-            font-weight: 800;
-            color: #27ae60;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            line-height: 1;
-            margin: 0;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #fff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
         
-        .logo-text h2 {
-            font-size: 1.4rem;
-            font-weight: 300;
-            letter-spacing: 3px;
-            color: #2ecc71;
-            margin-top: 5px;
-            text-transform: uppercase;
-        }
-        
-        /* Contenido principal */
-        .main-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 50px;
-        }
-        
-        .about {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 30px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .about h3 {
-            font-size: 1.8rem;
+        .tagline {
+            font-size: 1.2rem;
             margin-bottom: 20px;
-            color: #2ecc71;
-            text-align: center;
+            color: #f8f5f0;
         }
         
-        .about p {
-            font-size: 1.1rem;
-            color: #bdc3c7;
-            line-height: 1.8;
-            text-align: justify;
+        .welcome-section {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+        
+        .welcome-text {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #5a3e2b;
+        }
+        
+        .choose-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #8a6642;
+        }
+        
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #8a6642, transparent);
+            margin: 30px auto;
+            width: 80%;
+        }
+        
+        .services-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #5a3e2b;
         }
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+            padding: 0 20px;
         }
         
         .service-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
+            background: white;
+            border-radius: 15px;
             padding: 25px;
             text-align: center;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
         }
         
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            background: rgba(46, 204, 113, 0.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
         }
         
-        .service-card i {
+        .service-icon {
             font-size: 2.5rem;
-            color: #2ecc71;
             margin-bottom: 15px;
+            color: #8a6642;
         }
         
-        .service-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: #ecf0f1;
+        .service-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #5a3e2b;
         }
         
-        .service-card p {
-            color: #bdc3c7;
-            margin-bottom: 20px;
-            font-size: 0.95rem;
-        }
-        
-        .btn {
+        .service-btn {
             display: inline-block;
-            background: #27ae60;
+            background-color: #8a6642;
             color: white;
-            padding: 12px 25px;
-            border-radius: 30px;
+            padding: 10px 20px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            transition: background 0.3s;
-            border: none;
-            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
         }
         
-        .btn:hover {
-            background: #219652;
+        .service-btn:hover {
+            background-color: #5a3e2b;
         }
         
-        .contact-info {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
+        .schedule {
+            text-align: center;
             padding: 30px;
-            margin-top: 40px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: #e8d6c0;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
         }
         
-        .contact-info h3 {
-            font-size: 1.8rem;
+        .schedule-title {
+            font-size: 1.5rem;
             margin-bottom: 20px;
-            color: #2ecc71;
-            text-align: center;
+            color: #5a3e2b;
         }
         
-        .contact-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        
-        .contact-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        
-        .contact-item i {
-            font-size: 2rem;
-            color: #2ecc71;
+        .schedule-days, .schedule-hours {
+            font-size: 1.1rem;
             margin-bottom: 10px;
-        }
-        
-        .contact-item p {
-            color: #bdc3c7;
-        }
-        
-        .highlight {
-            color: #2ecc71;
-            font-weight: bold;
         }
         
         footer {
             text-align: center;
+            padding: 30px 0;
             margin-top: 50px;
-            padding: 20px;
-            color: #7f8c8d;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: #5a3e2b;
+            color: white;
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .footer-text {
+            margin-bottom: 15px;
+        }
+        
+        .social-icons {
+            margin-top: 15px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: #e8d6c0;
         }
         
         @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                text-align: center;
+            .services-grid {
+                grid-template-columns: 1fr;
             }
             
-            .logo-container {
-                margin-right: 0;
-                margin-bottom: 20px;
-                justify-content: center;
-            }
-            
-            .logo-text h1 {
+            .logo {
                 font-size: 2.2rem;
             }
             
-            .logo-text h2 {
-                font-size: 1.1rem;
-            }
-            
-            .main-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
+            .welcome-text {
+                font-size: 1.2rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="logo-container">
-                <div class="logo">
-                    <div class="logo-inner">MC</div>
-                </div>
-                <div class="logo-text">
-                    <h1>MundoCan</h1>
-                    <h2>VETERINARIA & SPA</h2>
-                </div>
-            </div>
-        </header>
-        
-        <div class="main-content">
-            <div class="about">
-                <h3>Veterinaria MUNDO CAN</h3>
-                <p>Veterinaria fundada en 2010 con el fin de ofrecer un servicio de calidad con ética y responsabilidad en todas nuestras áreas. Dirigida para animales menores (felinos y caninos).</p>
-                <p>Nuestro equipo de profesionales altamente capacitados está comprometido con el bienestar de tus mascotas, brindando atención médica especializada y servicios de spa de la más alta calidad.</p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-stethoscope"></i>
-                    <h3>Atención Médica</h3>
-                    <p>Servicio veterinario profesional para caninos y felinos con los más altos estándares de calidad.</p>
-                    <a href="https://wa.me/51924113604?text=Hola,%20quiero%20una%20consulta%20médica" class="btn">Solicitar cita</a>
-                </div>
-                
-                <div class="service-card">
-                    <i class="fas fa-spa"></i>
-                    <h3>SPA Canino</h3>
-                    <p>Baños terapéuticos, cortes de pelo y uñas, limpieza dental y más servicios de estética canina.</p>
-                    <a href="https://wa.me/51924113604?text=Hola,%20quiero%20agendar%20un%20servicio%20de%20SPA" class="btn">Reservar SPA</a>
-                </div>
-            </div>
+    <header>
+        <div class="container">
+            <div class="logo">Mundo Can</div>
+            <div class="tagline">Cuidamos a tus mascotas con amor y profesionalismo</div>
         </div>
+    </header>
+    
+    <div class="container">
+        <section class="welcome-section">
+            <p class="welcome-text">¡Bienvenidos! Cuidamos a tus mascotas con amor y profesionalismo 😊</p>
+            <p class="choose-text">Elige lo que necesitas 🌟</p>
+        </section>
+        
+        <div class="divider"></div>
+        
+        <h2 class="services-title">Nuestros Servicios</h2>
         
         <div class="services-grid">
-            <div class="service-card">
-                <i class="fas fa-syringe"></i>
-                <h3>Vacunación</h3>
-                <p>Mantén a tu mascota protegida y saludable con nuestro servicio de vacunación.</p>
-                <a href="https://wa.me/51924113604?text=Hola,%20quiero%20información%20sobre%20vacunación" class="btn">Consultar</a>
+            <div class="service-card" onclick="location.href='#vacunas'">
+                <i class="fas fa-syringe service-icon"></i>
+                <h3 class="service-name">Vacunas y desparasitaciones</h3>
+                <p>Mantén a tu mascota protegida contra enfermedades con nuestros servicios de vacunación y desparasitación.</p>
+                <a href="#vacunas" class="service-btn">Más información</a>
             </div>
             
-            <div class="service-card">
-                <i class="fas fa-pills"></i>
-                <h3>Farmacia Veterinaria</h3>
-                <p>Medicamentos, antipulgas, vitaminas y todos los productos que tu mascota necesita.</p>
-                <a href="https://wa.me/51924113604?text=Hola,%20necesito%20productos%20veterinarios" class="btn">Ver productos</a>
+            <div class="service-card" onclick="location.href='#banio'">
+                <i class="fas fa-bath service-icon"></i>
+                <h3 class="service-name">Baño y peluquería</h3>
+                <p>Deja a tu mascota impecable con nuestros servicios de baño, corte de pelo y cuidado estético.</p>
+                <a href="#banio" class="service-btn">Reservar ahora</a>
             </div>
             
-            <div class="service-card">
-                <i class="fas fa-flask"></i>
-                <h3>Laboratorio</h3>
-                <p>Diagnósticos precisos para el cuidado de tu mascota con tecnología de punta.</p>
-                <a href="https://wa.me/51924113604?text=Hola,%20quiero%20información%20sobre%20análisis%20de%20laboratorio" class="btn">Más información</a>
+            <div class="service-card" onclick="location.href='#ecografias'">
+                <i class="fas fa-stethoscope service-icon"></i>
+                <h3 class="service-name">Ecografías y laboratorio</h3>
+                <p>Servicios de diagnóstico avanzado para el cuidado de la salud de tu mascota.</p>
+                <a href="#ecografias" class="service-btn">Solicitar cita</a>
             </div>
             
-            <div class="service-card">
-                <i class="fas fa-tag"></i>
-                <h3>Promociones</h3>
-                <p>Aprovecha nuestras ofertas especiales para el cuidado de tu mascota.</p>
-                <a href="https://wa.me/51924113604?text=Hola,%20quiero%20conocer%20las%20promociones" class="btn">Ver promociones</a>
+            <div class="service-card" onclick="location.href='#citas'">
+                <i class="far fa-calendar-alt service-icon"></i>
+                <h3 class="service-name">Reserva tu cita online</h3>
+                <p>Agenda una cita de manera rápida y sencilla a través de nuestro sistema online.</p>
+                <a href="#citas" class="service-btn">Reservar cita</a>
+            </div>
+            
+            <div class="service-card" onclick="location.href='#promociones'">
+                <i class="fas fa-tags service-icon"></i>
+                <h3 class="service-name">Promociones del Mes</h3>
+                <p>Descubre nuestras ofertas especiales y promociones exclusivas para el cuidado de tu mascota.</p>
+                <a href="#promociones" class="service-btn">Ver promociones</a>
+            </div>
+            
+            <div class="service-card" onclick="location.href='#ubicacion'">
+                <i class="fas fa-map-marker-alt service-icon"></i>
+                <h3 class="service-name">Cómo llegar</h3>
+                <p>Encuentra nuestra ubicación y las mejores rutas para visitarnos con facilidad.</p>
+                <a href="#ubicacion" class="service-btn">Ver mapa</a>
             </div>
         </div>
         
-        <div class="contact-info">
-            <h3>Contáctanos</h3>
-            <div class="contact-details">
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <p><span class="highlight">Teléfonos:</span><br>924 113 604<br>01 7550935</p>
-                </div>
-                
-                <div class="contact-item">
-                    <i class="fab fa-whatsapp"></i>
-                    <p><span class="highlight">WhatsApp:</span><br>924 113 604</p>
-                </div>
-                
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p><span class="highlight">Dirección:</span><br>Av. Lima 1136 paradero 6 1/2<br>José Gálvez VMT, Lima</p>
-                </div>
-                
-                <div class="contact-item">
-                    <i class="fas fa-clock"></i>
-                    <p><span class="highlight">Horario:</span><br>Lunes a Sábado: 9:30 am - 8 pm<br>Domingos y feriados: 9 am - 2 pm</p>
-                </div>
-            </div>
+        <div class="schedule">
+            <h3 class="schedule-title">Horario de Atención</h3>
+            <p class="schedule-days">Lunes a Sábado: 9:30 am - 8 pm</p>
+            <p class="schedule-hours">Domingos y Feriados: 9 am - 2 pm</p>
         </div>
     </div>
     
     <footer>
-        <p>© 2010 - 2023 Veterinaria MundoCan - Todos los derechos reservados</p>
+        <div class="container">
+            <p class="footer-text">Mundo Can - Cuidando a tus mascotas desde 2010</p>
+            <p class="footer-text">Teléfono: (123) 456-7890 | Email: info@mundocan.com</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
     </footer>
+    
+    <script>
+        // Efecto de retroalimentación al hacer clic en las tarjetas de servicio
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 200);
+            });
+        });
+        
+        // Simulación de redirección (en un caso real, aquí irían enlaces reales)
+        document.querySelectorAll('.service-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                alert('En una implementación real, esto llevaría a la página específica del servicio.');
+            });
+        });
+    </script>
 </body>
 </html>
